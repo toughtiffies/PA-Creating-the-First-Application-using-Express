@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        strong {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= name %></h1>
+    <h2><%= title %></h2>
+    <ul>
+        <% definitions.forEach(function(definition) { %>
+            <li>
+                <strong><%= definition.tech %>:</strong> <%= definition.description %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
